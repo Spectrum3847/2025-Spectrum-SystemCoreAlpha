@@ -96,7 +96,7 @@ public class Climb extends Mechanism {
     }
 
     private ClimbConfig config;
-    private SpectrumServo latchServo = new SpectrumServo(9);
+    private SpectrumServo latchServo = new SpectrumServo(1);
     @Getter private SpectrumState latched = new SpectrumState("ClimbLatched");
     @Getter private ClimbSim sim;
 
