@@ -1,0 +1,117 @@
+{
+  "version": "2025.0",
+  "waypoints": [
+    {
+      "anchor": {
+        "x": 1.2077949438202247,
+        "y": 7.048595505617977
+      },
+      "prevControl": null,
+      "nextControl": {
+        "x": 1.9210523950737786,
+        "y": 6.636796124135232
+      },
+      "isLocked": false,
+      "linkedName": "feeder"
+    },
+    {
+      "anchor": {
+        "x": 3.75,
+        "y": 5.28
+      },
+      "prevControl": {
+        "x": 3.375,
+        "y": 5.929519052838329
+      },
+      "nextControl": null,
+      "isLocked": false,
+      "linkedName": null
+    }
+  ],
+  "rotationTargets": [],
+  "constraintZones": [
+    {
+      "name": "Constraints Zone",
+      "minWaypointRelativePos": 0.736491777603764,
+      "maxWaypointRelativePos": 1.0,
+      "constraints": {
+        "maxVelocity": 1.0,
+        "maxAcceleration": 1.0,
+        "maxAngularVelocity": 540.0,
+        "maxAngularAcceleration": 720.0,
+        "nominalVoltage": 12.0,
+        "unlimited": false
+      }
+    }
+  ],
+  "pointTowardsZones": [],
+  "eventMarkers": [
+    {
+      "name": "sourceIntakeOff",
+      "waypointRelativePos": 0.2024275646045442,
+      "endWaypointRelativePos": null,
+      "command": null
+    },
+    {
+      "name": "coral",
+      "waypointRelativePos": 0.44675019577133573,
+      "endWaypointRelativePos": null,
+      "command": null
+    },
+    {
+      "name": "L4",
+      "waypointRelativePos": 0.4483163664839445,
+      "endWaypointRelativePos": null,
+      "command": null
+    },
+    {
+      "name": "homeOff",
+      "waypointRelativePos": 0.4483163664839451,
+      "endWaypointRelativePos": null,
+      "command": null
+    },
+    {
+      "name": "actionOn",
+      "waypointRelativePos": 0.7615505090054862,
+      "endWaypointRelativePos": null,
+      "command": null
+    },
+    {
+      "name": "autoAlign",
+      "waypointRelativePos": 0.8241973375097761,
+      "endWaypointRelativePos": null,
+      "command": null
+    },
+    {
+      "name": "actionOff",
+      "waypointRelativePos": 1.0,
+      "endWaypointRelativePos": null,
+      "command": null
+    },
+    {
+      "name": "home",
+      "waypointRelativePos": 1.0,
+      "endWaypointRelativePos": null,
+      "command": null
+    }
+  ],
+  "globalConstraints": {
+    "maxVelocity": 4.0,
+    "maxAcceleration": 3.5,
+    "maxAngularVelocity": 540.0,
+    "maxAngularAcceleration": 720.0,
+    "nominalVoltage": 12.0,
+    "unlimited": false
+  },
+  "goalEndState": {
+    "velocity": 0.0,
+    "rotation": -59.99999999999999
+  },
+  "reversed": false,
+  "folder": "Blue Left Source",
+  "idealStartingState": {
+    "velocity": 0,
+    "rotation": -53.5
+  },
+  "useDefaultConstraints": true
+}
