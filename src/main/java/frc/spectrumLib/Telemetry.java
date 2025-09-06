@@ -1,21 +1,15 @@
 package frc.spectrumLib;
 
-import dev.doglog.DogLog;
-import dev.doglog.DogLogOptions;
-import edu.wpi.first.hal.HALUtil;
 import edu.wpi.first.networktables.NetworkTableInstance;
-import edu.wpi.first.wpilibj.PowerDistribution;
 import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.CommandScheduler;
-import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.Subsystem;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Telemetry extends DogLog implements Subsystem {
+//public class Telemetry extends DogLog implements Subsystem {
+    public class Telemetry implements Subsystem {
 
     private static final Map<String, String[]> previousAlerts = new HashMap<>();
 
@@ -46,48 +40,55 @@ public class Telemetry extends DogLog implements Subsystem {
         logAlerts();
     }
 
-    public static void start(boolean ntPublish, boolean captureNt, PrintPriority priority) {
-        setPriority(priority);
-        Telemetry.setOptions(
-                new DogLogOptions()
-                        .withNtPublish(ntPublish)
-                        .withCaptureDs(true)
-                        .withCaptureNt(captureNt)
-                        .withCaptureConsole(false)
-                        .withLogExtras(false));
-        Telemetry.setPdh(new PowerDistribution(0));
-        /* Display the currently running commands on SmartDashboard*/
-        SmartDashboard.putData(CommandScheduler.getInstance());
-    }
+    // public static void start(boolean ntPublish, boolean captureNt, PrintPriority priority) {
+    //     setPriority(priority);
+    //     Telemetry.setOptions(
+    //             new DogLogOptions()
+    //                     .withNtPublish(ntPublish)
+    //                     .withCaptureDs(true)
+    //                     .withCaptureNt(captureNt)
+    //                     .withCaptureConsole(false)
+    //                     .withLogExtras(false));
+    //     Telemetry.setPdh(new PowerDistribution(0));
+    //     /* Display the currently running commands on SmartDashboard*/
+    //     SmartDashboard.putData(CommandScheduler.getInstance());
+    // }
 
     private static void setPriority(PrintPriority priority) {
         Telemetry.priority = priority;
     }
 
-    public static Command log(Command cmd) {
-        return cmd.deadlineFor(
-                        Commands.startEnd(
-                                () -> log("Commands", "Init: " + cmd.getName()),
-                                () -> log("Commands", "End: " + cmd.getName())))
-                .ignoringDisable(cmd.runsWhenDisabled())
-                .withName(cmd.getName());
+    // public static Command log(Command cmd) {
+    //     return cmd.deadlineFor(
+    //                     Commands.startEnd(
+    //                             () -> log("Commands", "Init: " + cmd.getName()),
+    //                             () -> log("Commands", "End: " + cmd.getName())))
+    //             .ignoringDisable(cmd.runsWhenDisabled())
+    //             .withName(cmd.getName());
+    // }
+
+    public static Command log(Command cmd){
+        return cmd;
     }
 
     // Boolean logger
+    // public static void log(String key, Boolean value) {
+    //     var now = HALUtil.getFPGATime();
+    //     logger.queueLog(now, key, value);
+    // }
+
     public static void log(String key, Boolean value) {
-        var now = HALUtil.getFPGATime();
-        logger.queueLog(now, key, value);
     }
 
     // double logger
     public static void log(String key, double value) {
-        var now = HALUtil.getFPGATime();
-        logger.queueLog(now, key, value);
+        // var now = HALUtil.getFPGATime();
+        // logger.queueLog(now, key, value);
     }
 
     public static void log(String key, double[] value) {
-        var now = HALUtil.getFPGATime();
-        logger.queueLog(now, key, value);
+        // var now = HALUtil.getFPGATime();
+        // logger.queueLog(now, key, value);
     }
 
     /** Print a statement if they are enabled */
@@ -96,7 +97,7 @@ public class Telemetry extends DogLog implements Subsystem {
         if (priority == PrintPriority.HIGH || Telemetry.priority == PrintPriority.NORMAL) {
             System.out.println(out);
         }
-        log("Prints", out);
+        // log("Prints", out);
     }
 
     public static void print(String output) {
@@ -122,7 +123,7 @@ public class Telemetry extends DogLog implements Subsystem {
 
         for (String alert : alertStrings) {
             if (!Arrays.asList(previousAlertStrings).contains(alert)) {
-                log("Alerts", prefix + ": " + alert);
+                // log("Alerts", prefix + ": " + alert);
             }
         }
 

@@ -6,50 +6,70 @@
     "GLOBAL": {
       "font": "Proggy Dotted",
       "fps": "120",
-      "height": "1080",
+      "height": "894",
       "maximized": "0",
       "style": "0",
-      "userScale": "2",
-      "width": "1920",
-      "xpos": "-1",
-      "ypos": "-1"
+      "userScale": "5",
+      "width": "1844",
+      "xpos": "3906",
+      "ypos": "111"
     }
   },
   "Window": {
+    "###/SmartDashboard/Field2d": {
+      "Collapsed": "0",
+      "Pos": "788,256",
+      "Size": "400,200"
+    },
+    "###/SmartDashboard/LeftView": {
+      "Collapsed": "0",
+      "Pos": "512,349",
+      "Size": "357,200"
+    },
+    "###/SmartDashboard/frontView": {
+      "Collapsed": "0",
+      "Pos": "464,340",
+      "Size": "367,200"
+    },
+    "###Addressable LEDs": {
+      "Collapsed": "0",
+      "Pos": "406,4",
+      "Size": "261,340"
+    },
     "###FMS": {
       "Collapsed": "0",
-      "Pos": "7,810",
-      "Size": "87,41"
+      "Pos": "329,350",
+      "Size": "269,274"
     },
     "###Joysticks": {
       "Collapsed": "0",
-      "Pos": "375,697",
-      "Size": "142,41"
+      "Pos": "263,631",
+      "Size": "1336,226"
     },
     "###NetworkTables": {
       "Collapsed": "0",
-      "Pos": "375,415",
+      "Pos": "736,477",
       "Size": "1125,277"
     },
     "###NetworkTables Info": {
       "Collapsed": "0",
-      "Pos": "375,195",
+      "Pos": "823,60",
       "Size": "1125,217"
     },
     "###Other Devices": {
       "Collapsed": "0",
-      "Pos": "1537,30",
+      "Pos": "1271,31",
       "Size": "375,1042"
     },
     "###System Joysticks": {
       "Collapsed": "0",
-      "Pos": "7,525",
-      "Size": "206,41"
+      "Pos": "7,274",
+      "Size": "313,326"
     },
     "###Timing": {
       "Collapsed": "0",
       "Pos": "7,225",
-      "Size": "114,41"
+      "Size": "215,236"
     },
     "Debug##Default": {
       "Collapsed": "0",
@@ -59,7 +79,7 @@
     "Robot State": {
       "Collapsed": "0",
       "Pos": "5,20",
-      "Size": "137,41"
+      "Size": "156,170"
     }
   }
 }
